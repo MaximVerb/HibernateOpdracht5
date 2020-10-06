@@ -13,6 +13,7 @@ public class School {
     @OneToMany (mappedBy = "school", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Student> students = new ArrayList<>();
 
+    @OrderBy("name ASC")
     public List<Student> getStudents() {
         return students;
     }

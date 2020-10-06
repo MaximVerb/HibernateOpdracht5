@@ -13,7 +13,7 @@ public class AddStudent {
             tx.begin();
             School sch = em.find(School.class,1L);
             List<Student> students = sch.getStudents();
-            students.add(new Student("Kamala",sch));
+            students.add(new Student("Oreo",sch));
             sch.setStudents(students);
             em.persist(sch);
             tx.commit();
